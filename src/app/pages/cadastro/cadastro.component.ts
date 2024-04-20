@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './cadastro.component.scss'
 })
 export class CadastroComponent {
+submitForm() {
+throw new Error('Method not implemented.');
+}
 
 }
