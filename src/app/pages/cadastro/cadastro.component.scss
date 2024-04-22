@@ -58,9 +58,19 @@ header{
 
 input {
   flex: 4; /* Define a largura flexível para que ocupem todo o espaço disponível */
-  margin-right: 10px; /* Adiciona espaçamento entre as caixas de texto */
+  margin-right: 40px; /* Adiciona espaçamento entre as caixas de texto */
   border-radius: 5px; /* Cantos arredondados */
   border: 1px solid #000000; /* Borda sólida */
+  width: 200px; /* Definindo a largura da caixa de texto como 300 pixels */
+}
+
+#confirmcourse{
+  margin-right: 40px; /* Adiciona espaçamento entre as caixas de texto */
+  width: 200px; /* Defina o comprimento desejado aqui */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -4%);
 }
 
 .input-group {
@@ -102,5 +112,14 @@ input {
   margin-top: 1rem;
   width: 14rem;
   height: 2rem;
-  align-items: center;
+  text-align: center;
+  display: flex;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -450%);
+}
+
+.button span {
+  color: rgb(255, 255, 255); 
 }

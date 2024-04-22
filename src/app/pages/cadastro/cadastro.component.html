@@ -16,53 +16,56 @@
         
                   <div class="input-roup">
                       <div class="input-box">
-                          <label for="firstname">Nome</label>
+                          <label for="firstname" class="form-label">Nome</label>
                           <input id="firstname" type="nome" name="firstname" placeholder="Digite seu nome completo" required>
                       </div>
 
                       <div class="input-box">
-                          <label for="Username">Username</label>
+                          <label for="Username" class="form-label">Username</label>
                           <input id="Username" type="Username" name="Username" placeholder="Digite seu Username" required>
                       </div>
   
                       <div class="input-box">
-                        <label for="confirmage">Idade</label>
+                        <label for="confirmage" class="form-label">Idade</label>
                         <input id="confirmage" type="idade" name="confirmage" placeholder="Digite sua idade" required>
                       </div>
-  
-  
-                      <div class="input-box">
-                          <label for="confirmcourse">Curso</label>
-                          <input id="confirmcourse" type="curso" name="confirmcourse" list="cursos" placeholder="Selecione seu curso" required>
-                          <datalist id="cursos">
-                            <option value="Informática"></option>
-                            <option value="Mecânica"></option>
-                            <option value="Eletronica"></option>
-                        </datalist>
-                      </div>
-  
                   </div>
 
+
                   <div class="input-roup">
-                  <div class="input-box">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+                  <div class="input-box" >
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
                 </div>
 
                 <div class="input-box">
-                  <label for="password">Senha</label>
+                  <label for="password" class="form-label">Senha</label>
                   <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
               </div>
 
               <div class="input-box">
-                <label for="confirmPassword">Confirme sua Senha</label>
+                <label for="confirmPassword" class="form-label">Confirme sua Senha</label>
                 <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha" required>
             </div>
-          </div>
 
           </div>
+          </div>
 
-          <button mat-button class="button">Entrar</button>
+
+          <div>
+            <div class="input-box">
+              <label for="confirmcourse" id="confirmcourse" class="form-label">Curso</label>
+              <input id="confirmcourse" type="curso" name="confirmcourse" list="cursos" placeholder="Selecione seu curso" required>
+              <datalist id="cursos">
+                <option value="Informática"></option>
+                <option value="Mecânica"></option>
+                <option value="Eletrônica"></option>
+            </datalist>
+          </div>
+          </div>
+          
+
+          <button mat-button class="button"><span>Entrar</span></button>
 
     </body>
 
