@@ -5,7 +5,6 @@ import {PrimengModule} from '../../assets/shared/primeng.module'
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { InputMaskModule } from 'primeng/inputmask';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -22,9 +21,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
-    InputMaskModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
   ]
 })
 export class PagesModule { }
