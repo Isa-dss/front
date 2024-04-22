@@ -1,6 +1,6 @@
 #tela {
   width: 91rem;
-  height: 40rem;
+  height: 42rem;
   display: flex;
   border: 1px solid black;
 }
@@ -45,6 +45,7 @@
   background-color: #4F1964;
   color: white;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 14rem;
   height: 2rem;
 }
@@ -53,5 +54,12 @@
 
 .logo {
   margin-bottom: 10rem;
-  width: 350px;
+  width: 200px;
+}
+
+
+.custom-input {
+  border-bottom-style: solid; /* Define o estilo da borda como sólido */
+  border-bottom-width: 2px; /* Define a largura da borda */
+  border-bottom-color: purple; /* Define a cor da borda */
 }

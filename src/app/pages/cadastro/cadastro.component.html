@@ -8,13 +8,13 @@
     <div class="cadastro">
 
       <header><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">CRIE SUA CONTA NO <b><span>NIMET</span></b></header>
-      <p>Já tem uma conta?<a> Login</a></p>
+      <p>Já tem uma conta?<a style="color: purple;" (click)="login()" >Login </a></p>
 
       <body>
 
         <div class="conteiner">
-        
-                  <div class="input-roup">
+
+                  <div class="input-roup mx-4">
                       <div class="input-box">
                           <label for="firstname">Nome</label>
                           <input id="firstname" type="nome" name="firstname" placeholder="Digite seu nome completo" required>
@@ -24,26 +24,26 @@
                           <label for="Username">Username</label>
                           <input id="Username" type="Username" name="Username" placeholder="Digite seu Username" required>
                       </div>
-  
+
                       <div class="input-box">
                         <label for="confirmage">Idade</label>
                         <input id="confirmage" type="idade" name="confirmage" placeholder="Digite sua idade" required>
                       </div>
-  
-  
-                      <div class="input-box">
+
+
+                      <div class="input-box center">
                           <label for="confirmcourse">Curso</label>
-                          <input id="confirmcourse" type="curso" name="confirmcourse" list="cursos" placeholder="Selecione seu curso" required>
+                          <input id="confirmcourse" type="curso"  name="confirmcourse" list="cursos" placeholder="Selecione seu curso" required>
                           <datalist id="cursos">
                             <option value="Informática"></option>
                             <option value="Mecânica"></option>
                             <option value="Eletronica"></option>
                         </datalist>
                       </div>
-  
+
                   </div>
 
-                  <div class="input-roup">
+                  <div class="input-roup mx-4">
                   <div class="input-box">
                     <label for="email">Email</label>
                     <input id="email" type="email" name="email" placeholder="Digite seu email" required>
@@ -58,12 +58,17 @@
                 <label for="confirmPassword">Confirme sua Senha</label>
                 <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha" required>
             </div>
-          </div>
+
+
+
 
           </div>
 
-          <button mat-button class="button">Entrar</button>
+          </div>
 
+          <div class="input-roup text-center">
+            <button class="button">Cadastrar</button>
+        </div>
     </body>
 
 
