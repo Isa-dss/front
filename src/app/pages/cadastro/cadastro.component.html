@@ -12,7 +12,7 @@
 
       <body>
 
-        <div class="conteiner">
+        <div class="conteiner p-5">
 
                   <div class="input-roup">
                       <div class="input-box">
@@ -35,7 +35,7 @@
 
                   <div class="input-roup">
                   <div class="input-box">
-                    <label for="email">Email</label>
+                    <label for="email" class="form-label">Email</label>
                     <input id="email" type="email" name="email" placeholder="Digite seu email" required>
                 </div>
 
@@ -50,22 +50,20 @@
             </div>
           </div>
 
-
-          <div>
-            <div class="input-box">
-              <label for="confirmcourse" id="confirmcourse" class="form-label">Curso</label>
-              <input id="confirmcourse" type="curso" name="confirmcourse" list="cursos" placeholder="Selecione seu curso" required>
-              <datalist id="cursos">
-                <option value="Informática"></option>
-                <option value="Mecânica"></option>
-                <option value="Eletrônica"></option>
-            </datalist>
-          </div>
-          </div>
-
-          <button mat-button class="button">Entrar</button>
-
         </div>
+
+          <div class="input-box">
+            <label for="confirmcourse" id="confirmcourse" class="form-label">Curso</label>
+            <input id="confirmcourse" type="curso" name="confirmcourse" list="cursos" placeholder="Selecione seu curso" required>
+            <datalist id="cursos">
+              <option value="Informática"></option>
+              <option value="Mecânica"></option>
+              <option value="Eletrônica"></option>
+          </datalist>
+        </div>
+
+        <button mat-button class="button"><span>Entrar</span></button>
+
     </body>
 
 
