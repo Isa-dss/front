@@ -1,28 +1,31 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
 <div id="tela">
   <div id="login">
-    <img src="../../../assets/images/logo-nimet.svg" alt="imagem ilustrativa do login" id="img" class="logo" />
+    <img src="../../../assets/images/logo-nimet.svg" alt="imagem ilustrativa do login" id="img" class="logo mb-5"> <!-- Adicionado mb-3 para diminuir a margem inferior da imagem -->
 
-    <!-- <Label for="login"></Label>
-      <input placeholder="digite aqui" id="login"> -->
+    <form class="form"> <!-- Reduzida a margem inferior do formulário -->
+      <div class="mb-4">
+        <label for="username" class="form-label">Login</label>
+        <input type="text" class="form-control border-0 border-bottom custom-input"  placeholder="Username" id="username">
+      </div>
+      <div class="mb-4">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control border-0 border-bottom" placeholder="Senha" id="senha">
+      </div>
 
-    <form class="form">
-      <mat-form-field>
-        <mat-label>Username</mat-label>
-        <input matInput placeholder="@abs_sisters" />
-      </mat-form-field>
+      <button mat-button class="button" (click)="login()">Entrar</button>
 
-      <mat-form-field>
-        <mat-label>Senha</mat-label>
-        <input matInput placeholder="@abs_sisters"/>
-      </mat-form-field>-
+      <p>Ainda não tem uma conta?<a style="color: purple; cursor: pointer;" (click)="login()"> Cadastre-se</a></p>
+      <!-- <p>Ainda não tem uma conta?<a style="color: purple;"  [routerLink]="cadastro"> Cadastre-se</a></p> -->
     </form>
-
-    <button mat-button class="button">Entrar</button>
-
-    <p>Ainda não tem uma conta?<a> Cadastre-se</a></p>
   </div>
 
   <div id="card">
-    <img src="../../../assets/images/login.svg" alt="imagem ilustrativa do login" id="img" />
+    <img src="../../../assets/images/login.svg" alt="imagem ilustrativa do login" id="img" /> <!-- Ajustada a margem da imagem se necessário -->
   </div>
 </div>
+
+
