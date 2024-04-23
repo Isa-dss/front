@@ -33,7 +33,7 @@ initForm(){
       email: [null],
       dataNascimento: [null],
       senha: [null],
-      curso: ['s'],
+      curso: [null],
     }
   );
 }
@@ -41,16 +41,22 @@ initForm(){
 cadastrar(){
   this.service.servicoCadastrar(this.cadastroForm.value).subscribe({
     next: (result) => {
-      console.log("A requisição foi um sucesso! " + result);
+      console.log("A requisição foi um sucesso! ");
+      console.log(result);
+      console.log(this.cadastroForm.value);
     },
     error: (erro) => {
-      console.log ("A requisição não teve sucesso" + erro);
+      console.log("A requisição não teve sucesso", JSON.stringify(erro));
+      console.log(erro);
+      console.log(this.cadastroForm.value);
+
+
     }
   })
 }
 
 login(){
-  this.routeador.navigate(['/login'])
+  this.routeador.navigate([''])
 }
 
 }

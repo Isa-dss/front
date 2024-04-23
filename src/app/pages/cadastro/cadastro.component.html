@@ -2,51 +2,59 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <div class="tela">
-<div class="roxo">
-</div>
+   <div class="roxo"></div>
 
     <div class="cadastro">
 
       <header><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">CRIE SUA CONTA NO <b><span>NIMET</span></b></header>
-      <p>Já tem uma conta?<a style="color: purple;" (click)="login()" >Login </a></p>
+      <p>Já tem uma conta?<a style="color: purple; cursor: pointer;" (click)="login()">Login</a></p>
 
       <body>
 
+        <form [formGroup]="cadastroForm">
+
         <div class="conteiner p-5">
 
-                  <div class="input-roup">
+
+                  <div class="mx-2">
                       <div class="input-box">
-                          <label for="firstname" class="form-label">Nome</label>
-                          <input id="firstname" type="nome" name="firstname" placeholder="Digite seu nome completo" required>
+                          <label for="nome" class="form-label">Nome</label>
+                          <input id="nome"  formControlName="nome" class="form-control" type="nome" name="firstname"
+                          placeholder="ABS SISTERS" required>
                       </div>
 
                       <div class="input-box">
                           <label for="Username" class="form-label">Username</label>
-                          <input id="Username" type="Username" name="Username" placeholder="Digite seu Username" required>
+                          <input id="Username" formControlName="username" class="form-control" type="Username" name="Username"
+                          placeholder="@abs_sisters" required>
                       </div>
 
                       <div class="input-box">
                         <label for="confirmage" class="form-label">Idade</label>
-                        <input id="confirmage" type="idade" name="confirmage" placeholder="Digite sua idade" required>
+                        <input id="confirmage" formControlName="dataNascimento" class="form-control" type="idade" name="confirmage"
+                        placeholder="18" required>
                       </div>
-  
+
                   </div>
 
 
-                  <div class="input-roup">
+                  <div class="mx-2">
                   <div class="input-box">
                     <label for="email" class="form-label">Email</label>
-                    <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+                    <input id="email" formControlName="email" class="form-control"  type="email" name="email"
+                    placeholder="Digite seu email"  class="form-control" required>
                 </div>
 
                 <div class="input-box">
                   <label for="password" class="form-label">Senha</label>
-                  <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                  <input id="password"formControlName="senha"  type="password" name="password"
+                  placeholder="Absisters123!" class="form-control" required>
               </div>
 
               <div class="input-box">
                 <label for="confirmPassword" class="form-label">Confirme sua Senha</label>
-                <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha" required>
+                <input id="confirmPassword"  type="password" name="confirmPassword"
+                placeholder="Absisters123!" class="form-control" required>
             </div>
           </div>
 
@@ -54,21 +62,19 @@
 
           <div class="input-box">
             <label for="confirmcourse" id="confirmcourse" class="form-label">Curso</label>
-            <input id="confirmcourse" type="curso" name="confirmcourse" list="cursos" placeholder="Selecione seu curso" required>
+            <input id="confirmcourse" formControlName="curso" type="curso" name="confirmcourse" list="cursos"
+             placeholder="Selecione seu curso" class="form-control"   required>
             <datalist id="cursos">
-              <option value="Informática"></option>
-              <option value="Mecânica"></option>
-              <option value="Eletrônica"></option>
+              <option value="INFORMATICA"></option>
+              <option value="MECANICA"></option>
+              <option value="ELETRONICA"></option>
           </datalist>
         </div>
-
-        <button mat-button class="button"><span>Entrar</span></button>
-
-    </body>
-
-
-        </div>
-      </div>
+        </form>
+        <button mat-button class="button" (click)="cadastrar()"><span>Cadastrar</span></button>
+     </body>
+  </div>
+</div>
 
 
 
