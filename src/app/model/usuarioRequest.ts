@@ -7,7 +7,7 @@ export class UsuarioRequest{
   email?:string;
   dataNascimento?: Date;
   senha?:string;
-  curso?:Curso;
+  curso?:string;
 
 
 }

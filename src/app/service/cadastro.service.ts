@@ -15,7 +15,7 @@ export class CadastroService {
 
 
   servicoCadastrar(request: UsuarioRequest) : Observable <UsuarioResponse>{
-    return this.httpClient.post(env.baseUrl + '/' +urlConfig.cadastrarUsuario, request).pipe(
+    return this.httpClient.post(env.baseApiUrl + '/' +urlConfig.cadastrarUsuario, request).pipe(
       map((res:any) => res)
     )
   }

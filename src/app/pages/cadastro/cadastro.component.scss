@@ -1,11 +1,10 @@
 .tela{
   display: flex;
-  width: 91rem;
-  height: 40rem;
-  border: 1px solid black;
+  width: 100vw; /* Ocupa 100% da largura do viewport */
+  height: 100vh; /* Ocupa 100% da altura do viewport */
   background-image: linear-gradient(to bottom, #73328d, #c185de);
-  //verificar os tons do gradiente para fazer aqui
 }
+
 
 
 .cadastro{
@@ -38,7 +37,7 @@ header{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-105%, -60%); /* Centralizando a imagem horizontalmente e verticalmente */
+  transform: translate(-106.5%, -50%); /* Centralizando a imagem horizontalmente e verticalmente */
   width: 55rem;
 }
 
@@ -51,25 +50,16 @@ header{
 input {
   flex: 2; /* Define a largura flexível para que ocupem todo o espaço disponível */
   margin-right: 40px; /* Adiciona espaçamento entre as caixas de texto */
-  border-radius: 5px; /* Cantos arredondados */
-  border: 1px solid #000000; /* Borda sólida */
-  width: 200px; /* Definindo a largura da caixa de texto como 300 pixels */
+  border-radius: 5px;
+  border: 1px solid #000000;
+  width: 230px;
 }
 
 #confirmcourse{
-  margin-right: 20px; /* Adiciona espaçamento entre as caixas de texto */
-  width: 200px; /* Defina o comprimento desejado aqui */
+  width: 230px;
   position: relative;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -100%);
-}
-
-.input-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 1rem 0;
+  transform: translate(-50%, -90%);
 }
 
 .input-box {
@@ -83,7 +73,7 @@ input {
 }
 
 .input-box input:focus-visible {
-  outline: 1px solid #6c63ff;
+  outline: 1px solid #3e37c0;
 }
 
 .input-box label,
