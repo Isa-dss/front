@@ -8,11 +8,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { EmailComponent } from './email/email.component';
+import { MainComponent } from './main/main.component';
+
 
 @NgModule({
   declarations: [
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    EmailComponent,
+    MainComponent
 
   ],
   imports: [
@@ -23,6 +29,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     MatFormFieldModule,
     FormsModule,
     MatButtonModule,
+    MatDatepickerModule,
+    MatInputModule,
   ]
 })
 export class PagesModule { }

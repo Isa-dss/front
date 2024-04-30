@@ -6,21 +6,25 @@
   <div id="login">
     <img src="../../../assets/images/logo-nimet.svg" alt="imagem ilustrativa do login" id="img" class="logo mb-5"> <!-- Adicionado mb-3 para diminuir a margem inferior da imagem -->
 
-    <form class="form"> <!-- Reduzida a margem inferior do formulário -->
+    <div class="form" >
       <div class="mb-4">
         <label for="username" class="form-label">Login</label>
-        <input type="text" class="form-control border-0 border-bottom custom-input"  placeholder="Username" id="username">
+        <br>
+        <input type="text" class="border-0 border-bottom custom-input" [(ngModel)]="login"
+               placeholder="@abs_sisters" id="username">
       </div>
       <div class="mb-4">
         <label for="senha" class="form-label">Senha</label>
-        <input type="password" class="form-control border-0 border-bottom" placeholder="Senha" id="senha">
+        <br>
+        <input type="password" class="border-0 border-bottom custom-input"  [(ngModel)]="senha"
+               placeholder="Senha" id="senha">
       </div>
 
-      <button mat-button class="button" style="color: aliceblue;" (click)="login()">Entrar</button>
+      <button mat-button class="button" style="color: aliceblue;" (click)="logar()">Entrar</button>
 
-      <p>Ainda não tem uma conta?<a style="color: purple; cursor: pointer;" (click)="login()"> Cadastre-se</a></p>
+      <p>Ainda não tem uma conta?<a style="cursor: pointer;" (click)="cadastro()"><span> Cadastre-se</span></a></p>
       <!-- <p>Ainda não tem uma conta?<a style="color: purple;"  [routerLink]="cadastro"> Cadastre-se</a></p> -->
-    </form>
+    </div>
   </div>
 
   <div id="card">

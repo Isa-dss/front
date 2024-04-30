@@ -7,7 +7,7 @@
     <div class="cadastro">
 
       <header><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">CRIE SUA CONTA NO <b><span>NIMET</span></b></header>
-      <p>Já tem uma conta?<a style="color: purple; cursor: pointer;" (click)="login()">Login</a></p>
+      <p>Já tem uma conta?<a style="cursor: pointer;" (click)="login()"><span>Login</span></a></p>
 
       <body>
 
@@ -29,11 +29,23 @@
                           placeholder="@abs_sisters" required>
                       </div>
 
+
                       <div class="input-box">
                         <label for="confirmage" class="form-label">Idade</label>
                         <input id="confirmage" formControlName="dataNascimento" class="form-control" type="idade" name="confirmage"
                         placeholder="18" required>
                       </div>
+
+                        <!-- <mat-form-field class="input-box">
+                          <label for="dataNascimento" class="form-label">Data nascimento</label>
+                          <input class="form-control" matInput [matDatepicker]="picker">
+                          <mat-datepicker-toggle matIconSuffix [for]="picker">
+                          </mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field> -->
+
+
+
 
                   </div>
 

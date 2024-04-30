@@ -53,12 +53,22 @@
 
 .logo {
   margin-bottom: 10rem;
-  width: 200px;
+  width: 250px;
 }
 
 
 .custom-input {
-  border-bottom-style: solid; /* Define o estilo da borda como sólido */
-  border-bottom-width: 2px; /* Define a largura da borda */
-  border-bottom-color: purple; /* Define a cor da borda */
+  border-bottom: 3px solid purple !important;
+  width: 300px !important;
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
+
+span{
+  color: #4F1964;
+}
+
+.form-label {
+  margin-bottom: 0.5rem; /* Ajuste conforme necessário */
+}
+

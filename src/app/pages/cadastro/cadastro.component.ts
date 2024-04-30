@@ -39,7 +39,7 @@ initForm(){
 }
 
 cadastrar(){
-  this.service.servicoCadastrar(this.cadastroForm.value).subscribe({
+  this.service.cadastrar(this.cadastroForm.value).subscribe({
     next: (result) => {
       console.log("A requisição foi um sucesso! ");
       console.log(result);
