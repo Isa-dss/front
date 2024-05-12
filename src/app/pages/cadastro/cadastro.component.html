@@ -20,20 +20,20 @@
                       <div class="input-box">
                           <label for="nome" class="form-label">Nome</label>
                           <input id="nome"  formControlName="nome" class="form-control" type="nome" name="firstname"
-                          placeholder="ABS SISTERS" required>
+                          placeholder="Digite seu nome" required>
                       </div>
 
                       <div class="input-box">
                           <label for="Username" class="form-label">Username</label>
                           <input id="Username" formControlName="username" class="form-control" type="Username" name="Username"
-                          placeholder="@abs_sisters" required>
+                          placeholder="Digite seu nome de usuário" required>
                       </div>
 
 
                       <div class="input-box">
-                        <label for="confirmage" class="form-label">Idade</label>
+                        <label for="confirmage" class="form-label">Data de nascimento</label>
                         <input id="confirmage" formControlName="dataNascimento" class="form-control" type="idade" name="confirmage"
-                        placeholder="18" required>
+                        placeholder="AA-MM-DD" required>
                       </div>
 
                         <!-- <mat-form-field class="input-box">
@@ -43,8 +43,6 @@
                           </mat-datepicker-toggle>
                           <mat-datepicker #picker></mat-datepicker>
                         </mat-form-field> -->
-
-
 
 
                   </div>
@@ -59,31 +57,37 @@
 
                 <div class="input-box">
                   <label for="password" class="form-label">Senha</label>
-                  <input id="password"formControlName="senha"  type="password" name="password"
-                  placeholder="Absisters123!" class="form-control" required>
+                  <input id="password" formControlName="senha"  type="password" name="password"
+                  placeholder="Digite sua senha" class="form-control" required>
               </div>
 
               <div class="input-box">
-                <label for="confirmPassword" class="form-label">Confirme sua Senha</label>
+                <label for="confirmPassword" class="form-label">Confirmação de Senha</label>
                 <input id="confirmPassword"  type="password" name="confirmPassword"
-                placeholder="Absisters123!" class="form-control" required>
+                placeholder="Digite sua senha" class="form-control" required>
             </div>
           </div>
-
+          
         </div>
 
-          <div class="input-box">
-            <label for="confirmcourse" id="confirmcourse" class="form-label">Curso</label>
-            <input id="confirmcourse" formControlName="curso" type="curso" name="confirmcourse" list="cursos"
-             placeholder="Selecione seu curso" class="form-control"   required>
-            <datalist id="cursos">
-              <option value="INFORMATICA"></option>
-              <option value="MECANICA"></option>
-              <option value="ELETRONICA"></option>
-          </datalist>
-        </div>
-        </form>
+        <div class="input-box">
+          <label for="confirmcourse" id="confirmcourse" class="form-label">Curso</label><br><br>
+          <input id="confirmcourse" formControlName="curso" type="curso" name="confirmcourse" list="cursos"
+           placeholder="Selecione seu curso" class="form-control"   required>
+          <datalist id="cursos">
+            <option value="INFORMATICA"></option>
+            <option value="MECANICA"></option>
+            <option value="ELETRONICA"></option>
+        </datalist>
+    </div><br>
+
+  
         <button mat-button class="button" (click)="cadastrar()"><span>Cadastrar</span></button>
+
+
+        </form>
+       
+        
      </body>
   </div>
 </div>

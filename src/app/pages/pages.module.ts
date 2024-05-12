@@ -19,7 +19,7 @@ import { MainComponent } from './main/main.component';
     CadastroComponent,
     EmailComponent,
     MainComponent
-
+  
   ],
   imports: [
     CommonModule,

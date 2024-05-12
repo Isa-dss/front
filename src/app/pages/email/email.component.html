@@ -7,20 +7,34 @@
 
   <div class="card">
 
-    <header><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">
-      Vamos finalizar seu cadastro e se tornar parte do <b><span>nimet</span></b>?</header>
+    <div class="conteiner p-5">
 
-      <body>
+    <body>
 
+    <h3><header><link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">Vamos finalizar o cadastro e se tornar parte do <b><span>nimet</span></b>?</header></h3>
 
     <!-- <p>Olá, {}! Seja bem vindo à sua jornada de estudos com o nimet!</p> -->
 
-    <p>Para confirmar o email, por favor clique no botão abaixo</p>
+    <div class="input-box">
+      <label for="token" class="form-label"></label>
+      <input  formControlName="token" class="form-control" type="tex" name="token"
+      placeholder="   Insira o código recebido por email" class="form-control" required>
+  </div>
+
+    <h2><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">Para confirmar o email, por favor clique no botão abaixo</h2>
+
+    <button mat-button class="button"><span>Confirmar email</span></button>
 
 
-    <button>Confirmar email</button>
 
     </body>
 
   </div>
+
+
+  </div>
 </div>
+
+
