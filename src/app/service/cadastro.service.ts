@@ -1,16 +1,23 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { environment as env } from '../../environments/enviroment';
 import { urlConfig } from '../../assets/config/urlConfig';
 import { UsuarioRequest } from '../model/usuarioRequest';
 import { UsuarioResponse } from '../model/usuarioResponse';
+import { VerificacaoEmailRequest } from '../model/verificacaoEmailRequest';
+import { LoginRequest } from '../model/loginRequest';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CadastroService {
 
+  httpOptions = {
+   headers: new HttpHeaders({
+     'Content-Type': 'application/json'
+   })
+ };
   constructor(private httpClient: HttpClient ) { }
 
 
@@ -21,15 +28,15 @@ export class CadastroService {
   }
 
 
-  logar(login:string, senha:string): Observable<UsuarioResponse> {
-      const request = { login, senha };
-    return this.httpClient.post<any>(env.baseApiUrl + '/' + urlConfig.logar+'?login='+login+'&senha='+senha, request).pipe(
+  logar(request:LoginRequest): Observable<UsuarioResponse> {
+    return this.httpClient.post<any>(env.baseApiUrl + '/' + urlConfig.logar+'?login='+request.login+'&senha='+request.password, request).pipe(
       map((res:any) => res)
     )
   }
 
-  verficarEmail(email:string): Observable<any> {
-    return this.httpClient.patch<any>(env.baseApiUrl + '/' + urlConfig.verificarEmail +'/'+email,email).pipe(
+  verficarEmail(token:VerificacaoEmailRequest): Observable<any> {
+
+    return this.httpClient.put(env.baseApiUrl + '/' + urlConfig.verificarEmail,token, this.httpOptions).pipe(
       map((res:any) => res)
     )
   }

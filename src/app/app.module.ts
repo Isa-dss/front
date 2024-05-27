@@ -1,4 +1,3 @@
-import { PrimengModule } from '../assets/shared/primeng.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { PagesModule } from './pages/pages.module';
@@ -20,7 +19,6 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MAT_NATIVE_DATE_FORMATS
   imports: [
     CommonModule,
     PagesModule,
-    PrimengModule,
     AppComponent,
     HttpClientModule,
     BrowserModule,

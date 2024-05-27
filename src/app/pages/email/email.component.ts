@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CadastroService } from '../../service/cadastro.service';
+import { VerificacaoEmailRequest } from '../../model/verificacaoEmailRequest';
 
 @Component({
   selector: 'app-email',
@@ -15,16 +16,16 @@ export class EmailComponent implements OnInit {
     private service: CadastroService
   ){}
 
-  email!:string;
+  token!:VerificacaoEmailRequest;
 
   ngOnInit(): void {
   }
 
 
   verificar(){
-    this.service.verficarEmail(this.email).subscribe({
+    this.service.verficarEmail(this.token).subscribe({
       next: (result) => {
-        console.log("A requisição foi um sucesso!" + this.email );
+        console.log("A requisição foi um sucesso!" + this.token );
         console.log(result);
       },
       error: (erro) => {
