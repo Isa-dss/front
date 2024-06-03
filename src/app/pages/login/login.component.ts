@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsuarioRequest } from '../../model/usuarioRequest';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CadastroService } from '../../service/cadastro.service';
-import { criarSenhaForte } from '../../validators/validators';
+import { criarSenhaForte } from '../../validators/password';
 import { MessageService } from 'primeng/api';
 
 
@@ -33,12 +33,13 @@ constructor (
     this.initForm();
   }
 
+  get f (){return this.loginForm.controls};
 
 initForm(){
   this.loginForm = this.fb.group(
     {
       login: ['',Validators.compose([Validators.required, Validators.email])],
-      password: ['', Validators.compose([Validators.required,Validators.minLength(6), criarSenhaForte()])],
+      password: ['', Validators.compose([Validators.required,Validators.minLength(8), criarSenhaForte()])],
     }
   );
 }
@@ -46,7 +47,6 @@ initForm(){
 logar(){
   this.service.logar(this.loginForm.value).subscribe({
     next: (result) => {
-      console.log("A requisição foi um sucesso! ");
       console.log(result);
       this.routeador.navigate(['/main']);
     },
@@ -59,6 +59,7 @@ logar(){
     }
   })
 }
+
 
 cadastro(){
   this.routeador.navigate(['/cadastro']);

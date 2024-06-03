@@ -7,6 +7,7 @@ import { MainComponent } from './main/main.component';
 import { SharedModule } from '../shared/shared.module';
 import { ToastModule } from 'primeng/toast';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UsuarioRequest } from '../model/usuarioRequest';
 
 
 

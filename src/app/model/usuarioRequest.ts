@@ -1,5 +1,6 @@
-import { Curso } from './curso';
+import { Injectable } from '@angular/core';
 
+@Injectable({providedIn: 'root'})
 
 export class UsuarioRequest{
   nome?: string;

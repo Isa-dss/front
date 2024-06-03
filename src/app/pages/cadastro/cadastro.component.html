@@ -36,39 +36,38 @@
         <div class="mx-2">
           <div class="input-box">
             <label for="email" class="form-label">Email</label>
-            <input id="email" formControlName="email" type="email" name="email"
-              placeholder="Digite seu email" class="form-control" required  />
+            <input id="email" formControlName="email" type="email" name="email" placeholder="Digite seu email"
+              class="form-control" required />
           </div>
 
           <div class="password-container">
             <div class="input-box">
               <label for="password" class="form-label">Senha</label>
-              <p-password formControlName="senha" [toggleMask]="true" inputStyleClass="password" weakLabel="Fraco"
+              <p-password formControlName="password" [toggleMask]="true" inputStyleClass="password" weakLabel="Fraco"
                 mediumLabel="Simples" strongLabel="Dentro dos parâmetros">
                 <ng-template pTemplate="header">
                   <h6>Requisitos</h6>
                 </ng-template>
                 <ng-template pTemplate="footer">
                   <ul class="pl-2 ml-2 mt-0" style="line-height: 1.3">
-                    <li>Deve possuir caracteres minusculos, maiusculos e números</li>
+                    <li>Deve conter caracteres especiais, minúsculos, maiúsculos e números</li>
                     <li>Mínimo de 8 caracteres</li>
                   </ul>
                 </ng-template>
               </p-password>
-              <!-- <p *ngIf="cadastroForm.get('senha')?.hasError" style="color:red">Senha deve conter uma valor válido</p> -->
+              <div *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched)">
+                <small class="text-danger" *ngIf="f['password'].errors?.['senhaForte']">Senha inválida.</small>
+              </div>
             </div>
           </div>
 
 
           <div class="input-box">
             <label for="confirmPassword" class="form-label">Confirmação de Senha</label>
-            <p-password [toggleMask]="true" inputStyleClass="password"></p-password>
-              <!-- <p *ngIf="
-                  cadastroForm.hasError('senhaDiferente') &&
-                  cadastroForm.get('confirmarSenha').touched
-                " class="text-danger">
-                As senhas não correspondem.
-              </p> -->
+            <p-password [toggleMask]="true" inputStyleClass="password" [feedback]="false"  formControlName="confirm_password"></p-password>
+            <div *ngIf="f['confirm_password'].invalid && (f['confirm_password'].dirty || f['confirm_password'])">
+              <small class="text-danger" *ngIf="f['confirm_password'].errors?.['not_matching']">As senhas não coincidem.</small>
+            </div>
           </div>
         </div>
       </div>
@@ -83,9 +82,8 @@
           <option value="ELETRONICA"></option>
         </datalist>
       </div>
-      <br />
 
-      <button class="button" (click)="cadastrar()">Cadastrar</button>
+      <button class="button" (click)="montarRequest()">Cadastrar</button>
     </form>
   </div>
 </div>
