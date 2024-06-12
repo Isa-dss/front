@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ToastModule } from 'primeng/toast';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioRequest } from '../model/usuarioRequest';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 
@@ -16,7 +17,8 @@ import { UsuarioRequest } from '../model/usuarioRequest';
     LoginComponent,
     CadastroComponent,
     EmailComponent,
-    MainComponent
+    MainComponent,
+    PerfilComponent
 
   ],
   imports: [
