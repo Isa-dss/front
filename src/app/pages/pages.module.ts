@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ToastModule } from 'primeng/toast';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioRequest } from '../model/usuarioRequest';
+import { ChartModule } from 'primeng/chart';
 
 
 
@@ -24,7 +25,10 @@ import { UsuarioRequest } from '../model/usuarioRequest';
     ReactiveFormsModule,
     FormsModule,
     SharedModule,
-    ToastModule
-    ]
+    ToastModule,
+    ChartModule
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+
 })
 export class PagesModule { }
