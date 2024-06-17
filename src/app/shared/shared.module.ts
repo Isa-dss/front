@@ -6,6 +6,10 @@ import { CalendarModule } from 'primeng/calendar';
 import { MessageModule } from 'primeng/message';
 import { FieldsetModule } from 'primeng/fieldset';
 import { ToastModule } from 'primeng/toast';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule} from '@angular/material/list';
+import { ListboxModule } from 'primeng/listbox';
+
 
 @NgModule({
   declarations: [],
@@ -17,7 +21,11 @@ import { ToastModule } from 'primeng/toast';
     PasswordModule,
     CalendarModule,
     MessageModule,
-    ToastModule
+    ToastModule,
+    MatSidenavModule,
+    MatListModule,
+    ListboxModule,
+
   ],
   exports: [
     CommonModule,
@@ -27,7 +35,12 @@ import { ToastModule } from 'primeng/toast';
     PasswordModule,
     CalendarModule,
     MessageModule,
-    ToastModule
+    ToastModule,
+    MatSidenavModule,
+    MatListModule,
+    ListboxModule,
+
   ]
 })
 export class SharedModule { }
+
