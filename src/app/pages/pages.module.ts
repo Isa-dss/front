@@ -9,6 +9,8 @@ import { ToastModule } from 'primeng/toast';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioRequest } from '../model/usuarioRequest';
 import { ChartModule } from 'primeng/chart';
+import { PerfilComponent } from './perfil/perfil.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -17,7 +19,9 @@ import { ChartModule } from 'primeng/chart';
     LoginComponent,
     CadastroComponent,
     EmailComponent,
-    MainComponent
+    MainComponent,
+    PerfilComponent,
+    MenuComponent
 
   ],
   imports: [
