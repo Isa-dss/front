@@ -6,9 +6,16 @@ import { CalendarModule } from 'primeng/calendar';
 import { MessageModule } from 'primeng/message';
 import { FieldsetModule } from 'primeng/fieldset';
 import { ToastModule } from 'primeng/toast';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule} from '@angular/material/list';
 import { ListboxModule } from 'primeng/listbox';
+
+
+import { SidebarModule } from 'primeng/sidebar';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
+import { AvatarModule } from 'primeng/avatar';
+import { StyleClassModule } from 'primeng/styleclass';
+import { Sidebar } from 'primeng/sidebar';
+
 
 
 @NgModule({
@@ -22,9 +29,12 @@ import { ListboxModule } from 'primeng/listbox';
     CalendarModule,
     MessageModule,
     ToastModule,
-    MatSidenavModule,
-    MatListModule,
     ListboxModule,
+    SidebarModule,
+    ButtonModule,
+    RippleModule,
+    AvatarModule,
+    StyleClassModule,
 
   ],
   exports: [
@@ -36,11 +46,18 @@ import { ListboxModule } from 'primeng/listbox';
     CalendarModule,
     MessageModule,
     ToastModule,
-    MatSidenavModule,
-    MatListModule,
     ListboxModule,
+    SidebarModule,
+    ButtonModule,
+    RippleModule,
+    AvatarModule,
+    StyleClassModule,
+    Sidebar,
 
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+
+  sidebarVisible: boolean = false;
+ }
 

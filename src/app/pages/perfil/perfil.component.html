@@ -1,132 +1,104 @@
-<mat-sidenav-container>
-  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true">
-    <mat-nav-list class="nav-list">
+<app-menu></app-menu>
 
-      <img src="../../../assets/images/logo-nimet.svg" alt="imagem ilustrativa do login" id="img" class="logo mb-5"/>
-
-      <nav id="sidebar">
-      <div id="sidebar_content">
-
-      <li class="side-item">
-        <i class="fa-solid fa-user"></i>
-        <span class="item-description">Informática</span>
-      </li>
-
-      <li class="side-item">
-        <i class="fa-solid fa-user"></i>
-        <span class="item-description">Fórum</span>
-      </li>
-
-      <li class="side-item">
-        <i class="fa-solid fa-user"></i>
-        <span class="item-description">Perfil</span>
-      </li>
+   <!-- ------------------------------------------------------------------------------ -->
 
 
-      <li class="side-item">
-        <i class="fa-solid fa-user"></i>
-        <span class="item-description">Sair</span>
-      </li>
+  <div class="tela-perfil">
+    <header>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"/><h5>Perfil</h5>
+    </header>
 
-
+     <!-- first column -->
+     <div class="borda">
+      <div class="input-box">
+        <header>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><h5>Nome</h5>
+        </header>
+        <input id="nome"  class="form-control" type="nome" name="firstname"
+          placeholder="Nome" required />
       </div>
-      </nav>
-
-    </mat-nav-list>
-  </mat-sidenav>
-
-</mat-sidenav-container>
-
-
-<div class="tela-perfil">
-  <header>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"/><span>Perfil</span>
-  </header>
-
-   <!-- first column -->
-   <div class="borda">
-    <div class="input-box">
-      <header>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><span>Nome</span>
-      </header>
-      <input id="nome"  class="form-control" type="nome" name="firstname"
-        placeholder="Nome" required />
-    </div>
-
-
-    <div class="input-box">
-      <header>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><span>Username</span>
-      </header>
-      <input id="Username"  class="form-control" type="Username" name="Username"
-      placeholder="Username" required />
-   </div>
-
-    <div class="input-box">
-      <header>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><span>Email</span>
-      </header>
-      <input id="email"  type="email" name="email" placeholder="Email"
-      class="form-control" required />
-   </div>
-
-    <div class="input-box">
-      <header>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><span>Senha</span>
-      </header>
-      <button class="button">Alterar Senha</button>
-    </div>
-
-    <div class="input-box">
-      <header>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><span>Curso</span>
-      </header>
-      <input id="confirmcourse"  type="curso" name="confirmcourse" list="cursos"
-          placeholder="Curso" class="form-control" required />
-    </div>
-
-    <div class="input-box">
-      <header>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><span>Data de Nascimento</span>
-      </header>
-      <input id="nome" class="form-control" type="nome" name="firstname"
-        placeholder="Digite seu nome" required />
-    </div>
 
 
       <div class="input-box">
-    <button class="button">Editar Perfil</button>
+        <header>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><h5>Username</h5>
+        </header>
+        <input id="Username"  class="form-control" type="Username" name="Username"
+        placeholder="Username" required />
+     </div>
+
+      <div class="input-box">
+        <header>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><h5>Email</h5>
+        </header>
+        <input id="email"  type="email" name="email" placeholder="Email"
+        class="form-control" required />
+     </div>
+
+      <div class="input-box">
+        <header>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><h5>Senha</h5>
+        </header>
+        <button class="button">Alterar Senha</button>
+      </div>
+
+      <div class="input-box">
+        <header>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><h5>Curso</h5>
+        </header>
+        <input id="confirmcourse"  type="curso" name="confirmcourse" list="cursos"
+            placeholder="Curso" class="form-control" required />
+      </div>
+
+      <div class="input-box">
+        <header>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" /><h5>Data de Nascimento</h5>
+        </header>
+        <input id="nome" class="form-control" type="nome" name="firstname"
+          placeholder="Digite seu nome" required />
+      </div>
+
+
+        <div class="input-box">
+      <button class="button">Editar Perfil</button>
+    </div>
+
+  </div>
+
+
+   <!-- ------------------------------------------------------------------------------ -->
+
+
+  <div>
+  <div class="quiz">
+
+    <div class="quiz-button">
+        <div class="input-box">
+          <button class="button-a">Excluir Perfil</button>
+        </div>
+    </div>
+
+    <div class="borda-quiz">
+      <h2>RESULTADOS DO QUIZ</h2>
+    </div>
+    </div>
+
+
+    <div class="quiz-a">
+      <div class="borda-quiz-a">
+         <h2>PERGUNTAS DO FÓRUM</h2>
+      </div>
+      </div>
+
+      <div class="quiz-b">
+        <div class="borda-quiz-b">
+          <h2>RESPOSTAS DO FÓRUM</h2>
+        </div>
+        </div>
+
+
   </div>
 
 </div>
 
 
-<div>
-<div class="quiz">
-
-  <div class="quiz-button">
-      <div class="input-box">
-        <button class="button-a">Excluir Perfil</button>
-      </div>
-  </div>
-
-  <div class="borda-quiz">
-    <h2>RESULTADOS DO QUIZ</h2>
-  </div>
-  </div>
-
-
-  <div class="quiz-a">
-    <div class="borda-quiz-a">
-       <h2>PERGUNTAS DO FÓRUM</h2>
-    </div>
-    </div>
-
-    <div class="quiz-b">
-      <div class="borda-quiz-b">
-        <h2>RESPOSTAS DO FÓRUM</h2>
-      </div>
-      </div>
-
-
-</div>

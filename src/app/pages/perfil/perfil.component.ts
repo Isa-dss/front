@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
+import { Sidebar } from 'primeng/sidebar';
 
 @Component({
   selector: 'app-perfil',
@@ -6,5 +7,12 @@ import { Component} from '@angular/core';
   styleUrls: ['./perfil.component.scss']
 })
 export class PerfilComponent {
+
+  @ViewChild('sidebarRef') sidebarRef!: Sidebar;
+
+  closeCallback(e: Event): void {
+      this.sidebarRef.close(e);
+  }
+sidebarVisible: any;
 
 }
