@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Importe BrowserAnimationsModule
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MAT_NATIVE_DATE_FORMATS, NativeDateAdapter } from '@angular/material/core';
 import { ChartModule } from 'primeng/chart';
+import { MenuComponent } from './pages/menu/menu.component';
 
 
 
@@ -28,7 +29,7 @@ import { ChartModule } from 'primeng/chart';
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
-    ChartModule
+    ChartModule,
 
 
   ],

@@ -9,6 +9,8 @@ import { ToastModule } from 'primeng/toast';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule} from '@angular/material/list';
 import { ListboxModule } from 'primeng/listbox';
+import { TableModule } from 'primeng/table';
+
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { ListboxModule } from 'primeng/listbox';
     MatSidenavModule,
     MatListModule,
     ListboxModule,
+    TableModule
 
   ],
   exports: [
@@ -39,6 +42,7 @@ import { ListboxModule } from 'primeng/listbox';
     MatSidenavModule,
     MatListModule,
     ListboxModule,
+    TableModule
 
   ]
 })

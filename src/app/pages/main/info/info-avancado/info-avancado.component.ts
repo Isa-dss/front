@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  selector: 'app-info-avancado',
+  templateUrl: './info-avancado.component.html',
+  styleUrls: ['./info-avancado.component.scss']
 })
-export class MainComponent {
+export class InfoAvancadoComponent {
   basicData: any;
 
   basicOptions: any;
