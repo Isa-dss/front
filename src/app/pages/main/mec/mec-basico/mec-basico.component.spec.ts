@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainComponent } from './main.component';
+import { MecBasicoComponent } from './mec-basico.component';
 
-describe('MainComponent', () => {
-  let component: MainComponent;
-  let fixture: ComponentFixture<MainComponent>;
+describe('MecBasicoComponent', () => {
+  let component: MecBasicoComponent;
+  let fixture: ComponentFixture<MecBasicoComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MainComponent]
+      declarations: [MecBasicoComponent]
     });
-    fixture = TestBed.createComponent(MainComponent);
+    fixture = TestBed.createComponent(MecBasicoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

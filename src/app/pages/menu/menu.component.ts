@@ -7,6 +7,11 @@ import { Sidebar } from 'primeng/sidebar';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  isExpanded = false;
+
+  toggleSidenav() {
+    this.isExpanded = !this.isExpanded;
+  }
 
   @ViewChild('sidebarRef') sidebarRef!: Sidebar;
 

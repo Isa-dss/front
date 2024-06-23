@@ -7,6 +7,8 @@ import { MessageModule } from 'primeng/message';
 import { FieldsetModule } from 'primeng/fieldset';
 import { ToastModule } from 'primeng/toast';
 import { ListboxModule } from 'primeng/listbox';
+import { TableModule } from 'primeng/table';
+
 
 
 import { SidebarModule } from 'primeng/sidebar';
@@ -30,6 +32,7 @@ import { Sidebar } from 'primeng/sidebar';
     MessageModule,
     ToastModule,
     ListboxModule,
+    TableModule
     SidebarModule,
     ButtonModule,
     RippleModule,
@@ -47,6 +50,7 @@ import { Sidebar } from 'primeng/sidebar';
     MessageModule,
     ToastModule,
     ListboxModule,
+    TableModule
     SidebarModule,
     ButtonModule,
     RippleModule,

@@ -4,11 +4,12 @@ import { TipoUsuario } from './tipoUsuario';
 
 export class UsuarioResponse {
   //  usuarioId?: UUID;
+   usuarioId!: string;
    nome!: string;
    username!: string;
-   emailValido!:string;
+   email!: String;
+   emailValido!:boolean;
    dataNascimento!: Date;
-   senha!:string;
    curso!:Curso;
    tipoUsuario!:TipoUsuario;
    dataCriado!: Date;
