@@ -1,3 +1,5 @@
+@import "primeicons/primeicons.css";
+
 .sidenav{
   width: 200px;
   /* Ocupa 100% da largura do viewport */
@@ -7,92 +9,7 @@
   background-image: linear-gradient(to bottom, #73328d, #c185de);
 }
 
-
-#sidebar_content {
-  padding: 15px;
-}
-
-#side_items {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  list-style: none;
-}
-
-.side-item {
-  border-radius: 8px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-
-.side-item:hover:not(.active),
-#logout_btn:hover {
-  background-color: #e3e9f7;
-  opacity: 0.5;
-  width: 10;
-}
-
-
-.side-item i {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10px;
-  height: 10px;
-}
-
-
-.conteiner{
-  flex: 5;
-  background-color: rgb(255, 255, 255);
-  border-radius: 30px 0px 0px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-
-.logo {
-  margin-bottom: 3rem;
-  width: 9.5rem;
-  top: 20%;
-  left: 22px;
-  right: 22px;
-  border-radius: 20px;
-  transform: translate(16%, 20%);
-  align-items: center;
-  opacity: 0.7;
-}
-
-
-
-.item-description {
-  width: 0px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 1.3em;
-  transition: width .6s;
-  height: 0px;
-  color: rgb(255, 255, 255);
-  align-items: center;
-  justify-content: center;
-}
-
-
-#sidebar.open-sidebar {
-  min-width: 15%;
-}
-
-#sidebar.open-sidebar .item-description {
-  width: 150px;
-  height: auto;
-}
-
-#sidebar.open-sidebar .side-item a {
-  justify-content: flex-start;
-  gap: 14px;
+.gradient-background {
+  background: linear-gradient(to bottom, #ffffff,  #73328d);
+  height: 220vh; /* Altura de 100% da viewport */
 }
