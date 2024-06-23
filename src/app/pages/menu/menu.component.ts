@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild  } from '@angular/core';
+import { Sidebar } from 'primeng/sidebar';
 
 @Component({
   selector: 'app-menu',
@@ -11,5 +12,13 @@ export class MenuComponent {
   toggleSidenav() {
     this.isExpanded = !this.isExpanded;
   }
+
+  @ViewChild('sidebarRef') sidebarRef!: Sidebar;
+
+  closeCallback(e: Event): void {
+      this.sidebarRef.close(e);
+  }
+
+  sidebarVisible: boolean = false;
 
 }

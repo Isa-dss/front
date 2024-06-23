@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { UsuarioResponse } from '../../model/usuarioResponse';
 import { UsuarioService } from '../../service/usuario.service';
 import { MessageService } from 'primeng/api';
 import { UsuarioPutSenhaRequest } from '../../model/usuarioPutSenhaRequest';
 import { UsuarioPutRequest } from '../../model/usuarioPutRequest';
+import { Sidebar } from 'primeng/sidebar';
 
 @Component({
   selector: 'app-perfil',
@@ -66,5 +67,12 @@ export class PerfilComponent implements OnInit {
 
 
 
+
+  @ViewChild('sidebarRef') sidebarRef!: Sidebar;
+
+  closeCallback(e: Event): void {
+      this.sidebarRef.close(e);
+  }
+sidebarVisible: any;
 
 }
