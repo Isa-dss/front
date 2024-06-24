@@ -32,7 +32,7 @@ import { Sidebar } from 'primeng/sidebar';
     MessageModule,
     ToastModule,
     ListboxModule,
-    TableModule
+    TableModule,
     SidebarModule,
     ButtonModule,
     RippleModule,
@@ -50,7 +50,7 @@ import { Sidebar } from 'primeng/sidebar';
     MessageModule,
     ToastModule,
     ListboxModule,
-    TableModule
+    TableModule,
     SidebarModule,
     ButtonModule,
     RippleModule,
