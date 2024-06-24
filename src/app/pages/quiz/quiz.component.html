@@ -1,0 +1,69 @@
+<div class="start_btn"><button (click)="showWarningPopup()">Iniciar Quiz</button></div>
+
+
+<div class="info_box" [ngClass]="showWarning ? 'activeInfo':''">
+  <div class="info-title"><span>Regras do Quiz</span></div>
+  <div class="info-list">
+    <div class="info">1. hhhhhhhhhhhhhhhhhhhhh</div>
+    <div class="info">2. jjjjjjjjjjjjjjjjjjjjj</div>
+    <div class="info">3. kkkkkkkkkkkkkkkkkkkkk</div>
+    <div class="info">4. ggggggggggggggggggggg</div>
+  </div>
+  <div class="button">
+    <button class="quit">Exit Quiz</button>
+    <button class="restart" (click)="startQuiz()">Continuar</button>
+  </div>
+</div>
+
+
+
+<div class="quiz_box" [ngClass]="isQuizStarted? 'activeQuiz':''">
+
+<header>
+<div class="title">QUIZ - Informática Avançada</div>
+<div class="timer">
+  <div class="time_left_txt">time off</div>
+  <div class="timer_sec">{{remainingTime}}</div>
+</div>
+
+<div class="time_line" style="width: 550;"></div>
+</header>
+
+<section ngIf="isQuizStarted">
+  <div class="que-text"><span>{{currentQuestionNo+1}}. {{questionsList[currentQuestionNo].question}}</span></div>
+  <div class="option_list">
+    <div class="option" [ngClass]="{'disabled': isOptionSelected(questionsList[currentQuestionNo].options),
+                                   'correct':option.isSelected && option.isCorrect,
+                                    'incorrect':option.isSelected && !option.isCorrect}" (click)="selectOption(option)" *ngIf="let option of questionsList[currentQuestionNo].options">
+      <span>{{option.answer}}</span> <!-- {{option.answer}} presisa ser adiciona nestá linha, dentro do
+      span, contudo o answer é um elemento presente no questoes.json, e por ele não existir
+      está dando erro-->
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="total_que"><span>
+    <p>{{currentQuestionNo+1}}</p> of <p>{{questionsList.length}}</p> Questions
+  </span></div>
+  <button *ngIf="currentQuestionNo+1 == questionsList.length" class="next_btn show" (click)="finish()">Finish</button>
+  <button *ngIf="currentQuestionNo+1 == questionsList.length" class="next_btn show" (click)="nextQuestion()">Next Que</button>
+</footer>
+</div>
+
+
+
+<div class="result_box" [ngClass]="isQuizEnded? 'activeResult':''">
+  <div class="icon">
+    <i class="fas fa-crown"></i>
+  </div>
+  <div class="complete_text">Você completou o Quiz, parabéns!</div>
+  <div class="score_text">
+    <span>Você acertou<p>{{correctAnswerCount}}</p> perguntas de <p>{{questionsList.length}}</p></span>
+  </div>
+
+  <div class="button">
+    <button class="restart">Refazer o Quiz</button>
+    <button class="quit" (click)="start()">Sair do Quiz</button>
+  </div>
+</div>

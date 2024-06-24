@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioRequest } from '../model/usuarioRequest';
 import { PerfilComponent } from './perfil/perfil.component';
 import { MenuComponent } from './menu/menu.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 
 
@@ -20,7 +21,8 @@ import { MenuComponent } from './menu/menu.component';
     EmailComponent,
     MainComponent,
     PerfilComponent,
-    MenuComponent
+    MenuComponent,
+    QuizComponent
 
   ],
   imports: [
